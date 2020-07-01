@@ -1,4 +1,5 @@
 .intro-section {
+  display: none !important;
   min-height: 100vh;
   background-image: linear-gradient(
     to top,
@@ -14,6 +15,7 @@
   align-items: center;
   justify-content: center;
   color: #333;
+  transition: transform 0.5s ease;
   .game-header {
     display: flex;
     align-items: center;
@@ -68,18 +70,6 @@
   }
 }
 
-@media screen and (max-width: 1300px) {
-  .flag-icon {
-    height: 50px !important;
-  }
-  .main-header {
-    font-size: 2rem !important;
-  }
-  .intro-image {
-    height: 300px !important;
-  }
-  .game-description {
-    font-size: 1.5rem !important;
-    line-height: 3rem !important;
-  }
+.intro-section.hidden {
+  transform: translateY(-100%);
 }

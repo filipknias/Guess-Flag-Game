@@ -28,5 +28,54 @@
         <h4 class="button-text">Let's Play</h4>
       </button>
     </section>
+
+    <section class="game-section">
+      <div class="info-container">
+        <div class="info-group main-info">
+          <div class="text-container">
+            <img src="./images/flag.svg" class="text-icon" />
+            <h5 class="text-light">Country:</h5>
+          </div>
+          <h1 class="country-text" id="current-country">POLAND</h1>
+        </div>
+
+        <div class="info-right">
+          <div class="info-group">
+            <div class="text-container">
+              <img src="./images/scoreboard.svg" class="text-icon" />
+              <h5 class="text-light">Score</h5>
+            </div>
+            <h4 class="info-text" id="user-score">0 Points</h4>
+          </div>
+
+          <div class="info-group">
+            <div class="text-container">
+              <img src="./images/clock.svg" class="text-icon" />
+              <h5 class="text-light">Time</h5>
+            </div>
+            <h4 class="info-text" id="user-time">00:00:00</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="interface-container">
+        <h4 class="flags-to-go">
+          <span id="user-flags-to-go" class="green-flags-number">20</span> left
+          to go
+        </h4>
+        <div class="interface-right">
+          <button class="interface-btn" id="home-btn">
+            <img src="./images/home.svg" class="interface-btn-icon" />
+            <h4 class="interface-btn-text">Home</h4>
+          </button>
+          <button class="interface-btn" id="refresh-btn">
+            <img src="./images/refresh.svg" class="interface-btn-icon" />
+            <h4 class="interface-btn-text">Refresh</h4>
+          </button>
+        </div>
+      </div>
+
+      <div class="flags-grid" id="game-board"></div>
+    </section>
   </body>
 </html>
