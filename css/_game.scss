@@ -112,10 +112,11 @@
         transform: scale(1.2);
       }
     }
-    .flag-container.correct {
+    .flag-container.correct,
+    .flag-container.wrong {
       pointer-events: none;
       &::after {
-        content: url("../images/checked.svg");
+        content: "";
         display: flex;
         align-items: center;
         justify-content: center;
@@ -125,6 +126,16 @@
         background-color: rgba(255, 255, 255, 0.7);
         width: 100%;
         height: 100%;
+      }
+    }
+    .flag-container.correct {
+      &::after {
+        content: url("../images/correct.svg");
+      }
+    }
+    .flag-container.wrong {
+      &::after {
+        content: url("../images/wrong.svg");
       }
     }
   }

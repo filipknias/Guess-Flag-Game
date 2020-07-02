@@ -283,12 +283,14 @@
           transform: scale(1.2);
 }
 
-.game-section .flags-grid .flag-container.correct {
+.game-section .flags-grid .flag-container.correct,
+.game-section .flags-grid .flag-container.wrong {
   pointer-events: none;
 }
 
-.game-section .flags-grid .flag-container.correct::after {
-  content: url("../images/checked.svg");
+.game-section .flags-grid .flag-container.correct::after,
+.game-section .flags-grid .flag-container.wrong::after {
+  content: "";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,6 +306,14 @@
   background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
   height: 100%;
+}
+
+.game-section .flags-grid .flag-container.correct::after {
+  content: url("../images/correct.svg");
+}
+
+.game-section .flags-grid .flag-container.wrong::after {
+  content: url("../images/wrong.svg");
 }
 
 @media screen and (max-width: 850px) {
@@ -346,5 +356,84 @@
   .interface-container .interface-btn-icon {
     height: 20px !important;
   }
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.modal-container .modal {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 4rem;
+  width: 800px;
+}
+
+.modal-container .modal .modal-header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.modal-container .modal .modal-body {
+  margin-top: 2rem;
+}
+
+.modal-container .modal .modal-body p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.modal-container .modal .modal-body .modal-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #2d81bd;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  margin: 2rem auto 0rem auto;
+}
+
+.modal-container .modal .modal-body .modal-btn .modal-btn-icon {
+  height: 30px;
+  margin-right: 15px;
+}
+
+.modal-container .modal .modal-body .modal-btn .modal-btn-text {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.modal-container .modal .modal-body .modal-btn:hover {
+  background-color: #1c6599;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #e2e2e2;
 }
 /*# sourceMappingURL=main.css.map */
