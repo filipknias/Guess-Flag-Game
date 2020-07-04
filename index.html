@@ -12,23 +12,6 @@
     <script src="./scripts/main.js" type="module" defer></script>
   </head>
   <body>
-    <section class="intro-section">
-      <div class="game-header">
-        <img src="./images/flag.svg" class="flag-icon" />
-        <h1 class="main-header">Guess The Flag</h1>
-      </div>
-
-      <h2 class="game-description">
-        Test yourself in this Guess The Flag Quiz. Game includes 240 different
-        flags all over the world. Do you want to test yourself ? Just click the
-        button.
-      </h2>
-      <button class="lets-play-button" id="play-button">
-        <img src="./images/dice.svg" class="button-icon" />
-        <h4 class="button-text">Let's Play</h4>
-      </button>
-    </section>
-
     <section class="game-section">
       <div class="info-container">
         <div class="info-group main-info">
@@ -36,7 +19,7 @@
             <img src="./images/flag.svg" class="text-icon" />
             <h5 class="text-light">Country:</h5>
           </div>
-          <h1 class="country-text" id="current-country">POLAND</h1>
+          <h1 class="country-text" id="current-country"></h1>
         </div>
 
         <div class="info-right">
@@ -47,13 +30,20 @@
             </div>
             <h4 class="info-text" id="user-score">0 Points</h4>
           </div>
+          <div class="info-group">
+            <div class="text-container">
+              <img src="./images/fails.svg" class="text-icon" />
+              <h5 class="text-light">Fails</h5>
+            </div>
+            <h4 class="info-text" id="user-fails">0 Fails</h4>
+          </div>
         </div>
       </div>
 
       <div class="interface-container">
         <h4 class="flags-to-go">
-          <span id="user-flags-to-go" class="green-flags-number">65</span> left
-          to go
+          <span id="user-flags-to-go" class="green-flags-number"></span> left to
+          go
         </h4>
         <div class="interface-right">
           <button class="interface-btn" id="refresh-btn">

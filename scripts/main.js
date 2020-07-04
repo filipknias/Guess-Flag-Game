@@ -1,10 +1,16 @@
 import Game from "./game.js";
 
-document.querySelector("#play-button").addEventListener("click", () => {
-  //hide intro section
-  const introSection = document.querySelector(".intro-section");
-  introSection.classList.add("hidden");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  //create new game object
+  const game = new Game("#game-board");
+  //get data from api
+  game.getFlagsData().then((data) => {
+    game.countriesData = data;
+    game.init();
+  });
 
-const flagsGame = new Game("#game-board");
-flagsGame.init();
+  //add event listener to refresh button
+  document.querySelector("#refresh-btn").addEventListener("click", () => {
+    game.init();
+  });
+});
